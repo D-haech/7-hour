@@ -1,0 +1,25 @@
+{% extends "main.html" %} {% block begins %}
+<h1>Home is Nice</h1>
+
+
+{% comment %} <div>
+    {% for room in house %}
+    <div>
+        <h5>{{room.id}} -- <a href = {% url "rooms" room.id %}>  {{room.name}} </a></h5>
+       
+    </div>
+    {% endfor %}
+</div> {% endcomment %}
+<a href={% url "create_room" %}>Create Room</a>
+<div> {% for room in house %}
+    <h1> {{room.id}}----<a href= {% url "rooms" room.id %} >{{room.name}}</a>  </h1>
+    <span>@ {{room.host.username}} </span>
+    <small> {{room.topic.name}} </small>
+    <hr>
+    {% endfor %}
+<!-- 
+<div>
+    <h5>it is now {{pk}}</h5>
+</div> -->
+
+{% endblock %}

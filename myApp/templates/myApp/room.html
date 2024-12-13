@@ -1,0 +1,13 @@
+{% extends "main.html" %} {% block begins %} {% comment %}
+<h1>This a {{room.name}}</h1>
+
+<div>
+  {% for rooms in room %}
+  <h1>{{rooms.id}}------{{rooms.name}}</h1>
+  {% endfor %}
+</div>
+{% endcomment %}
+<div><h1>{{house.name}} have an ID of {{house.id}} </h1>
+<span>@{{house.created}}</span>
+</div>
+{% endblock %}
