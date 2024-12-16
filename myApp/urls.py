@@ -10,5 +10,6 @@ urlpatterns = [
     # path('<str:pk>', views.show, name = 'show'),
     path('tested/<str:pk>/', views.news, name = 'tested'),
    # path('home/', views.home, name = 'home'),
-    path("createroom/", views.createRoom, name='create_room')
+    path("createroom/", views.createRoom, name='create_room'),
+    path('updateroom/<str:pk>/', views.updateRoom, name = 'update_room'),
 ]

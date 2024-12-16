@@ -12,6 +12,7 @@
 </div> {% endcomment %}
 <a href={% url "create_room" %}>Create Room</a>
 <div> {% for room in house %}
+    <a href='{% url "update_room" room.id %}'> Edith </a>
     <h1> {{room.id}}----<a href= {% url "rooms" room.id %} >{{room.name}}</a>  </h1>
     <span>@ {{room.host.username}} </span>
     <small> {{room.topic.name}} </small>
